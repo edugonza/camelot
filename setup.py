@@ -19,8 +19,8 @@ requires = [
     'numpy>=1.13.3',
     'openpyxl>=2.5.8',
     'pandas>=0.23.4',
-    'pdfminer.six>=20200726',
-    'PyPDF2>=1.26.0'
+    'pdfminer.six@git+https://github.com/edugonza/pdfminer.six.git@develop#egg=pdfminer.six',
+    'PyPDF4>=1.27.0'
 ]
 
 cv_requires = [
