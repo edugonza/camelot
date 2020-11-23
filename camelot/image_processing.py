@@ -32,7 +32,10 @@ def adaptive_threshold(imagename, process_background=False, blocksize=15, c=-2):
         numpy.ndarray representing the thresholded image.
 
     """
-    img = cv2.imread(imagename)
+    if isinstance(imagename, str):
+        img = cv2.imread(imagename)
+    else:
+        img = imagename
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
     if process_background:
